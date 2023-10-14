@@ -7,6 +7,8 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+#define BUFF_SIZE 1024
+
 int _putchar(char c);
 int _handle(va_list list, char c);
 int _print_string(char *s);
