@@ -13,5 +13,5 @@ int _print_string(char *s);
 int _print_integer(int n);
 int _printf(const char *format, ...);
 int _print_binary(unsigned int i);
-
+int _print_base(unsigned int n, int base, char *digit);
 #endif
