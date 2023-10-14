@@ -16,6 +16,8 @@ int _handle(va_list list, char c)
 		return (_print_string(va_arg(list, char *)));
 	else if (c == 'i' || c == 'd')
 		return (_print_integer(va_arg(list, int)));
+	else if (c == 'b')
+		return (_print_binary(va_arg(list, unsigned int)));
 	else if (c == '%')
 		return (_putchar('%'));
 	_putchar('%');
