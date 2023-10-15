@@ -28,6 +28,8 @@ int _handle(va_list list, char c)
 		return (_print_base(va_arg(list, unsigned int), 16, x));
 	else if (c == 'X')
 		return (_print_base(va_arg(list, unsigned int), 16, X));
+	else if (c == 'S')
+		return (_print_string_non_printable(va_arg(list, char *), X));
 	else if (c == '%')
 		return (_putchar('%'));
 	_putchar('%');

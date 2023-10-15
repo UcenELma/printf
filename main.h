@@ -16,4 +16,5 @@ int _print_integer(int n);
 int _printf(const char *format, ...);
 int _print_binary(unsigned int i);
 int _print_base(unsigned int n, int base, char *digit);
+int _print_string_non_printable(char *s, char *X);
 #endif
