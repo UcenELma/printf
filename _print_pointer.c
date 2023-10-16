@@ -1,38 +1,60 @@
 #include "main.h"
 
 /**
- * _pt_base - function for printing an unsigned integer in a specified base
- * @n: integer
- * @base: base
- * @digit: digit
- *
- * Return: number of characters printed
+ * _pt_base - function to print the hexadecimal
+ * @x: number
+ * @b: base
+ * made by : me and hocine
+ * Return: hexadecimal
  */
-int _pt_base(unsigned long n, int base, char *digit)
+int _pt_base(unsigned long int x, char b)
 {
-	int count = 0;
+	int i = 0, l, n;
+	char *X = "0123456789abcdef";
+	char m[64];
 
-	if (n / base)
-		count += _print_base(n / base, base, digit);
+	if (x == 0)
+		return (-1);
+	while (x)
+	{
+		n = x % 16;
+		x = x / 16;
+		m[i] = n;
+		i++;
+	}
+	l = i - 1;
 
-	count += _putchar(digit[n % base]);
-
-	return (count);
+	while (l >= 0)
+	{
+		if (b == 'X')
+			_putchar(X[(int)m[l]]);
+		else
+			_putchar(m[l] + '0');
+		l--;
+	}
+	return (i);
 }
 /**
- * _print_pointer - function for handling the %p
- * @pt: pointer
+ * _print_pointer - function to print the pointer
+ * @pt: number printed
  *
- * Return: number of characters printed
+ * by : me and him
+ * Return: adresse pointer
  */
+
 int _print_pointer(void *pt)
 {
-	unsigned long address = (unsigned long)pt;
-	int count = 0;
+	int cmp = 0;
+	long int n;
 
-	count += _putchar('0');
-	count += _putchar('x');
-	count += _pt_base(address, 16, "0123456789abcdef");
-
-	return (count);
+	if (!pt)
+	{
+		cmp += _print_string("(nil)");
+		return (cmp);
+	}
+	n = (unsigned long int)pt;
+	cmp += _putchar('0');
+	cmp += _putchar('x');
+	cmp += _pt_base(n, 'X');
+	return (cmp);
 }
