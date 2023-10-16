@@ -44,17 +44,17 @@ int _pt_base(unsigned long int x, char b)
 
 int _print_pointer(void *pt)
 {
-	int cmp = 0;
+	int count = 0;
 	long int n;
 
 	if (!pt)
 	{
-		cmp += _print_string("(nil)");
-		return (cmp);
+		count += _print_string("(nil)");
+		return (count);
 	}
 	n = (unsigned long int)pt;
-	cmp += _putchar('0');
-	cmp += _putchar('x');
-	cmp += _pt_base(n, 'X');
-	return (cmp);
+	count += _putchar('0');
+	count += _putchar('x');
+	count += _pt_base(n, 'X');
+	return (count);
 }
