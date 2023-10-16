@@ -38,7 +38,7 @@ int _pt_base(unsigned long int x, char b)
  * _print_pointer - function to print the pointer
  * @pt: number printed
  *
- * by : me and him
+ * made by : me and hocine
  * Return: adresse pointer
  */
 
