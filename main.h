@@ -25,5 +25,6 @@ int _print_base(unsigned int n, int base, char *digit);
 int _print_string_non_printable(char *s, char *X);
 int _print_pointer(void *pt);
 int _pt_base(unsigned long int x, char b);
+int _printf_reverse(va_list args, int printed)
 
 #endif
