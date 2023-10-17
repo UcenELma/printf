@@ -25,10 +25,5 @@ int _print_base(unsigned int n, int base, char *digit);
 int _print_string_non_printable(char *s, char *X);
 int _print_pointer(void *pt);
 int _pt_base(unsigned long int x, char b);
-int _printf_char(va_list args, int printed);
-int _x(unsigned int num, int printed, int uppercase);
-int _printf_octal(unsigned int num, int printed);
-int _printf_reverse(va_list args, int printed);
-int _printf_unsigned(unsigned int num, int printed);
 
 #endif
